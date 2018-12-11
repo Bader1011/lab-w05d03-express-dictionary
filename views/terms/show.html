@@ -7,6 +7,14 @@
   <title>Show Term</title>
 </head>
 <body>
-  
+    {{#termList}}
+  <h2>{{name}}</h2>
+  <h3>{{definition}}</h3>
+    
+
+    <form action="/terms/{{id}}?_method=DELETE" method="POST">
+      <button type="submit">Delete Term</button>
+    </form>
+    {{/termList}} 
 </body>
 </html>

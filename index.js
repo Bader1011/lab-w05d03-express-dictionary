@@ -23,7 +23,12 @@ app.use(methodOverride('_method'));
 
 // use controller 
 var termsController = require('./controllers/termsController');
-app.use(termsController);
+
+
+app.get('/', function(req, res){
+  res.render('./index');
+})
+app.use('/terms', termsController);
 
 app.listen(port, function(){
   console.log('---------------------------------------');
